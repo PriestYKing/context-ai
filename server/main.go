@@ -21,7 +21,8 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/register", handlers.CreateUser(db)).Methods("POST")
+	router.HandleFunc("/register", handlers.RegisterUser(db)).Methods("POST")
+	router.HandleFunc("/login", handlers.LoginUser(db)).Methods("POST")
 
 	authMux := middleware.JWTAuthMiddleware(router)
 

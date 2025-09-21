@@ -34,10 +34,10 @@ export default function NavigationBar() {
 
         {/* Desktop Auth Buttons - Takes equal space on right */}
         <div className="hidden md:flex items-center justify-end flex-1 gap-2">
-          <Link href="/sign-in">
+          <Link href="/login">
             <Button variant="link">Sign in</Button>
           </Link>
-          <Link href="/sign-up">
+          <Link href="/register">
             <Button variant="default">
               Get Started <ArrowRight className="w-4 h-4" />
             </Button>

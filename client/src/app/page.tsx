@@ -9,7 +9,7 @@ export default function Home() {
       <DotBackground />
 
       {/* Content on top of background */}
-      <div className="relative z-10 p-8">
+      <div className="relative z-10">
         {/* White Navigation Bar */}
 
         <NavigationBar />

@@ -34,8 +34,6 @@ func JWTAuthMiddleware(next http.Handler) http.Handler {
 			return
 		}
 
-		// Optionally set claims in context for handlers to use
-
 		next.ServeHTTP(w, r)
 	})
 }
