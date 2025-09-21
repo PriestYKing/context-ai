@@ -23,6 +23,7 @@ func main() {
 
 	router.HandleFunc("/register", handlers.RegisterUser(db)).Methods("POST")
 	router.HandleFunc("/login", handlers.LoginUser(db)).Methods("POST")
+	router.HandleFunc("/me", handlers.Auth).Methods("GET")
 
 	authMux := middleware.JWTAuthMiddleware(router)
 

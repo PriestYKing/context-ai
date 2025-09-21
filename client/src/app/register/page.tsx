@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Orbit, Mail, Lock } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { toast } from "sonner";
 
 const RegisterPage = () => {
+  const router = useRouter();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -29,13 +31,14 @@ const RegisterPage = () => {
     })
       .then((response) => {
         if (response.ok) {
-          toast.success("Login successful");
+          toast.success("Signup successful");
+          router.push("/dashboard");
         } else {
-          toast.error("Login failed");
+          toast.error("Signup failed");
         }
       })
       .catch((error) => {
-        toast.error("Login failed", error);
+        toast.error("Signup failed", error);
       });
   };
 
