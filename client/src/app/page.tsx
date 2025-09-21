@@ -11,9 +11,8 @@ export default function Home() {
       {/* Content on top of background */}
       <div className="relative z-10 p-8">
         {/* White Navigation Bar */}
-        <div className="bg-white rounded-2xl shadow-sm mb-8 px-4">
-          <NavigationBar />
-        </div>
+
+        <NavigationBar />
 
         {/* Hero Section */}
         <HeroSection />

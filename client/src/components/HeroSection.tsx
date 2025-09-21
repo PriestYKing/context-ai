@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 const HeroSection = () => {
-  return <div>heklo</div>;
+  return <div>hello</div>;
 };
-
 export default HeroSection;
